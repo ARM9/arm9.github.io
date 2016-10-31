@@ -34,18 +34,22 @@ function getScale(sharp) {
     return getNote(sharp) + ' ' + getRandom(scale);
 }
 
-var roman = ['i', 'ii', 'iii', 'iv', 'v', 'vi', 'vii'];
+var roman = ['I', 'bII', 'II', 'bIII', 'III', 'IV', 'bV', 'V', 'bVI', 'VI', 'bVII', 'VII'];
 
 function toRoman(n) {
-    var t = roman[rng(0, roman.length)];
-    return Math.random() < 0.5 ? t.toUpperCase() : t;
+    return roman[n];
+}
+
+function getRoman() {
+    var t = getRandom(roman);
+    return Math.random() < 0.5 ? t.toLowerCase() : t;
 }
 
 function getProgression() {
     var s = '';
     for(var n = rng(2,6); n > 0; n--) {
 	var t = getRandom(roman);
-	s += ' ' + (Math.random() < 0.5 ? t.toUpperCase() : t);
+	s += ' ' + (Math.random() < 0.5 ? t.toLowerCase() : t);
     }
     return s;
 }
