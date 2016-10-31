@@ -14,14 +14,25 @@ body {
 div.main {
     display: block;
     margin: auto;
-    padding: 5pt;
-    width: 50%;
+    width: 100%;
     text-align: center;
 }
 
 div.frege {
-    font-size: 48px;
+    font-size: 56px;
     font-weight: bold;
+}
+
+input.big-button {
+    font-size: 36px;
+    font-weight: bold;
+    font-family: monospace;
+    background-color: #DDD;
+    border: solid 3px #000;
+    width: 50%;
+}
+input.big-button:active {
+    background-color: #CCC;
 }
         </style>
         <script type='text/javascript' src='t.js'></script>
@@ -30,13 +41,15 @@ div.frege {
     <div class='main'>
         <div id='display' class='frege'>
         </div>
+        <br />
         <select id='what'>
             <option value='Chord'>Chord</option>
             <option value='Scale'>Scale</option>
             <option value='Progression'>Progression (not very good)</option>
         </select>
-        <input type='button' value='Go!' onclick='magic()' />
         <input type='checkbox' onchange='sharp = !sharp;' /> Sharp
+        <br />
+        <input type='button' class='big-button' value='Go!' onclick='magic()' />
     </div>
     <script type='text/javascript'>
     var disp = document.getElementById('display');
@@ -51,7 +64,7 @@ div.frege {
                 disp.innerHTML = getScale(sharp);
                 break;
             case 'Progression':
-                disp.innerHTML = getProgression() + ' in ' + getNote();
+                disp.innerHTML = getNote(sharp) + '<br />' + getProgression();
                 break;
             case 'Mode':
                 generateMode();
