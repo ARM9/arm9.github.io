@@ -45,6 +45,9 @@ input.big-button:active {
         <select id='what'>
             <option value='Chord'>Chord</option>
             <option value='Scale'>Scale</option>
+            <option value='Mode'>Mode</option>
+            <option value='Mode hm'>Mode (harm. minor)</option>
+            <option value='Mode mm'>Mode (mel. minor)</option>
             <option value='Progression'>Progression (not very good)</option>
         </select>
         <input type='checkbox' onchange='sharp = !sharp;' /> Sharp
@@ -67,7 +70,13 @@ input.big-button:active {
                 disp.innerHTML = getNote(sharp) + '<br />' + getProgression();
                 break;
             case 'Mode':
-                generateMode();
+                disp.innerHTML = getMode('major',sharp);
+                break;
+            case 'Mode hm':
+                disp.innerHTML = getMode('harmonic_minor',sharp);
+                break;
+            case 'Mode mm':
+                disp.innerHTML = getMode('melodic_minor',sharp);
                 break;
             default:
                 break;
