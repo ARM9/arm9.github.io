@@ -8,6 +8,13 @@ var inversions = ['', '6', '6/4', '7', '6/5', '4/3', '4/2'];
 
 var scale = ['major', 'minor'];
 
+var modes = {
+    major: ['ionian', 'dorian', 'phrygian', 'lydian', 'mixolydian', 'aeolian', 'locrian'];
+    harmonic_minor: ['harmonic minor', 'locrian #6', 'ionian #5', 'dorian #4', 'phrygian dominant', 'lydian #2', 'altered dominant bb7/ultra locrian'];
+    melodic_minor: ['melodic minor', 'dorian b2', 'lydian #5', 'mixolydian #4', 'mixolydian b6', 'locrian #2', 'altered dominant/super locrian'];
+};
+
+
 function rng(l, u) {
     // random integer in range [l,u)
     return (Math.random() * (u  - l) + l)|0;
