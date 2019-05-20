@@ -4,85 +4,18 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width" />
         <title>Super Copyright Infringement Kart</title>
-    <style>
-html, body {
-    font-family: monospace;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    /*image-rendering: pixelated;*/
-}
-#container {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: #70d8e0;
-    -webkit-transition: background 2s ease-in-out;
-    -o-transition: background 2s ease-in-out;
-    transition: background 2s ease-in-out;
-}
-#scene {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    -webkit-perspective: 1200px;
-    -ms-perspective: 1200px;
-    perspective: 1200px;
-}
-.surface3d {
-    /*background: no-repeat;*/
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    -webkit-transform-style: preserve-3d;
-    -ms-transform-style: preserve-3d;
-    transform-style: preserve-3d;
-    /*-webkit-backface-visibility: hidden;
-            backface-visibility: hidden;*/
-}
-/*
-.donut1 {
-background-image: url('assets/levels/donut1');
-background: '#70d8e0';
-}
-.spook3 {
-background-image: url('assets/levels/spook3');
-background: '#020004';
-}
-.rainbow {
-background-image: url('assets/levels/rainbow');
-background: '#08001b';
-}
-.beach1 {
-background-image: url('assets/levels/beach1');
-background: '#40d0d4';
-}
-.circuit1 {
-background-image: url('assets/levels/circuit1');
-background: '#70d8e0';
-}
-.vanilla1 {
-background-image: url('assets/levels/vanilla1');
-background: '#b0b8e0';
-}
-.choco2 {
-background-image: url('assets/levels/choco2');
-background: '#f4b050';
-}
-*/
-    </style>
     </head>
     <body>
-        <div id='data' style='position:absolute; top: 0; left: 0; z-index: 1;'>
-            controls: W A S D R F T
+        <div id='data' style='color: #000; position:absolute; top: 1px; left: 1px; z-index: 1;'>
+            controls: W A S D R F T<br/>
+            toggle: 1 billboard 2 outline<br/>
+            reset cam: U<br/>
+            scene: N M
         </div>
         <div id='container'>
             <div id='scene'>
             </div>
         </div>
-    <script src='./bundle.min.js'></script>
+    <script src='./build.js'></script>
     </body>
 </html>
